@@ -1,27 +1,27 @@
 ﻿namespace Labb_1__Grunderna_i_OOP //Simon Nilsson SUT23
 {
-    class Circle
+    internal class Circle
     {
-        int Radius;
+        int _Radius;
         float pi = 3.141f;
         public Circle(int radius)
         {
-            Radius = radius;
+            _Radius = radius;
         }
         public double getArea()
         {
-            return (Radius * Radius * pi);
+            return (_Radius * _Radius * pi);
         }        
         public double getCircum()
         {
-            return (2 * pi * Radius); 
+            return (2 * pi * _Radius); 
         }
         public double getVolume()
         {
-            return ((4 * pi * Radius * Radius * Radius) / 3); //Mathematic to calculate the volume och the circle. 
+            return ((4 * pi * _Radius * _Radius * _Radius) / 3); //Mathematic to calculate the volume och the circle. 
         }        
     }
-    class Triangle
+    internal class Triangle
     {
         public double buttom { get; set; }
         public double height { get; set; }
