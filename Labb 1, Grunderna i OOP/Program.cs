@@ -2,8 +2,8 @@
 {
     internal class Circle
     {
-        int _Radius;
-        float pi = 3.141f;
+        public int _Radius;
+        public float pi = 3.141f;
         public Circle(int radius)
         {
             _Radius = radius;
@@ -23,11 +23,15 @@
     }
     internal class Triangle
     {
-        public double buttom { get; set; }
-        public double height { get; set; }
+        public double buttom;
+        public double height;
         public double getTriangleArea()
         {
-            return ((buttom * height) / 2);
+            Console.Write("Skriv in basen på din triangel: ");
+            buttom = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Skriv in höjden på din triangel: ");
+            height = Convert.ToDouble(Console.ReadLine());            
+            return buttom * height / 2;
         }
     }
     internal class Program
@@ -41,12 +45,8 @@
             Console.WriteLine($"Cirkel nr 2:\nArea: {circle2.getArea()}\nOmkrets: {circle2.getCircum()}\nVolym: {circle2.getVolume()}\n");
 
             Triangle triangle = new Triangle();
-            Console.Write("Skriv in basen på din triangel: ");
-            triangle.buttom = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Skriv in höjden på din triangel: ");
-            triangle.height = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"\nArean på din triangel är: {triangle.getTriangleArea()}");
-            
+            Console.WriteLine($"Arean för triangeln är: {triangle.getTriangleArea()}");
+
         }
     }
 }
